@@ -16,7 +16,7 @@ public class linkedlist {
     		
     	}
     }
-    /* Adding the values to the node*/
+    /* Adding the key to the node*/
     
     public boolean add(final int data) {
     	boolean isAdded = false;
@@ -53,8 +53,37 @@ public class linkedlist {
     	}
     }
     
-  
+   /* Inserting a key at a particular position*/
+    public void insertAtPos(int pos,int data) {
+
+        
+        if(pos <= 0) {
+            System.out.println("Invalid position");
+            return;
+        }
+        else if(pos==1) {
+            push(data);
+        }
+        else
+        {
+            int count = 1;
+            Node newNode = new Node(data);
+            Node temp = head;
+            Node cur = null;
+            while(count<pos) {
+                cur = temp;
+                temp = temp.next;
+                count++;
+            }
+            newNode.next = temp;
+            cur.next = newNode;
+        }
+        
+        
+      }
+ }
     	
-}
+
+
     
 
