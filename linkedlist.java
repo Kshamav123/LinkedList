@@ -16,7 +16,7 @@ public class linkedlist {
     		
     	}
     }
-    /* Adding the node*/
+    /* Adding the values to the node*/
     
     public boolean add(final int data) {
     	boolean isAdded = false;
@@ -39,15 +39,8 @@ public class linkedlist {
     }
     
     
-    public void push(int data)
-    {
-    	Node newNode =new Node(data);
-    	newNode.next = head;
-    	head = newNode;
-    	
-    	
-    }
-    
+   
+    /* Printing the list*/
   
     
     public void print() {
@@ -60,30 +53,8 @@ public class linkedlist {
     	}
     }
     
-    public void insertAtPos(int pos,int data) {
-    	if(pos<1) {
-    		System.out.println("Invalid pos");
-    		return;
-    	}
-    
-    	if( pos ==1) {
-    		push(data);
-    		
-    	}
-    	else {
-    		Node newNode = new Node(data);
-    		Node temp = head;
-    		int count=1;
-    		while(count<pos)
-    		{
-    			temp =temp.next;
-    			count++;
-    		}
-    		Node curr = temp.next;
-    		temp.next=newNode;
-    		newNode.next = curr;
-    	}
+  
     	
-    }
-    }
+}
+    
 
