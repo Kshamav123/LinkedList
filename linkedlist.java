@@ -85,9 +85,22 @@ public class linkedlist {
 
 	/* Deleting the first element */
 
-	public void pop(int data) {
+	public void pop() {
 		Node temp = head;
 		head = temp.next;
 
+	}
+
+	
+	/* Deleting the last element*/
+	public void popLast() {
+        Node temp = head;
+        Node cur = null;
+        while(temp!=null && temp.next!=null) {
+        	cur = temp;
+        	temp = temp.next;
+        	
+        }
+        cur.next = null;
 	}
 }
