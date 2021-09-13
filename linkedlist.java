@@ -122,4 +122,20 @@ public class linkedlist {
 		}
 		
 	}
+	
+	/* inserting the data after the key*/
+	
+	public void insertKey(int key, int data)
+	{
+		Node newNode = new Node(data);
+		Node temp =head;
+		while(temp !=null) {
+			if (temp.data==key)
+			{
+				newNode.next=temp.next;
+				temp.next=newNode;
+			}
+			temp=temp.next;
+		}
+	}
 }
