@@ -103,4 +103,23 @@ public class linkedlist {
         }
         cur.next = null;
 	}
+
+
+       /*searching for a particular key*/
+	
+	public void searchKey(int key) {
+		Node temp = head;
+		int pos = 1;
+		while(temp != null)
+		{
+			
+			if (temp.data==key) {
+				System.out.println(+key+" found at position "+pos);
+		}
+			temp = temp.next;
+			pos = pos+1;
+			
+		}
+		
+	}
 }
