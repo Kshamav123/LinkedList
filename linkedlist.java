@@ -138,4 +138,47 @@ public class linkedlist {
 			temp=temp.next;
 		}
 	}
+	/* deleting the given key from the node*/
+
+	public void deleteGivenNode(int key) {
+		if (head == null || head.next == null)
+		{
+			//System.out.println("No node present");
+			return;
+		}
+		Node temp = head;
+		Node cur = null;
+		
+		while(temp!=null && temp.data != key)
+		{
+			cur=temp;
+			temp=temp.next;
+			
+		}
+		
+		cur.next=temp.next;
+	}
+
+	/* Finding the size of the linked list*/
+	
+	public void size() {
+		Node temp =head;
+		if (temp==null)
+		{
+			//System.out.println("null");
+		}
+		int count=1;
+		if(temp.next==null) {
+			count=1;
+			//System.out.println("Size of linked list is "+count);
+		}
+		while(temp!=null && temp.next!=null) {
+			temp=temp.next;
+			count++;
+			
+		}
+		System.out.println("Size of linked list is "+count);
+	}
+	
+
 }
